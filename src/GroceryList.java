@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class GroceryList {
     private String[] groceryNames;
     private int[] groceryQty;
@@ -28,9 +26,6 @@ public class GroceryList {
         }
         return sum;
     }
-//    public String toString(){
-//        return Arrays.toString(groceryNames) + Arrays.toString(groceryPrice);
-//    }
     public String toString(){
         String items = "";
         double sum = 0;
@@ -39,9 +34,7 @@ public class GroceryList {
                 items += "\n"+ groceryQty[i] + " " + groceryNames[i] ;
             }
         }
-        for (double i : groceryPrice){
-            sum += i;
-        }
+        sum = this.sum();
         return "Your Grocery list consists of these items:" + items + "\nat a total cost of $" + sum + ".";
 
     }
